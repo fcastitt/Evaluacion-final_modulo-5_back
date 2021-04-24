@@ -53,20 +53,25 @@ public class UsuarioControlador {
 				return new ResponseEntity<List<UsuariosEntity>>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
 
-
-	@GetMapping("/crearusuario")
-	public String crearUsuario() {
-		return "crearUsuario";
-
+	//método para crear nuevo usuario
+	@GetMapping
+	public ResponseEntity<UsuariosEntity> crearUsuario(UsuariosEntity nuevoUsuario) {
+	
+		 
+		try {
+			UsuariosEntity usuario = new UsuariosEntity();
+			usuario = crudUsuario.crear(nuevoUsuario);	
+			
+			return new ResponseEntity<UsuariosEntity>(usuario, HttpStatus.OK);
+			
+		} catch (Exception e) {
+			return new ResponseEntity<UsuariosEntity>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		
 	}
 
-	@PostMapping("/crearusuario")
-	public RedirectView crearUsuario(@ModelAttribute("formCrearUsuario") UsuariosEntity usuarios) {
-		crudUsuario.crear(usuarios);
-		return new RedirectView("listausuarios");
-
-	}
 	
 	@GetMapping("/buscar/{idUsuario}")
 	public ResponseEntity<UsuariosEntity> buscarPorId(@PathVariable Integer idUsuario) {
