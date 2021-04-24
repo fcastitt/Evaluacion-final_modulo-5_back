@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cl.awakelab.mod5.evaFinal</groupId>
-	<artifactId>Evaluacion-final_modulo-5_back</artifactId>
+	<artifactId>Evaluacion.final.modulo5.back</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Evaluacion.final.modulo5.back</name>
