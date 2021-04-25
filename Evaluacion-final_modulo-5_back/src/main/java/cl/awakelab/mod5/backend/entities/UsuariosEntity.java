@@ -20,7 +20,7 @@ public class UsuariosEntity {
 
 	@Id
 	@Column(name = "urun")
-	private Integer uRun;
+	private String uRun;
 	@Column(name = "usunombre")
 	private String usuNombre;
 	@Column(name = "usuapellido")
