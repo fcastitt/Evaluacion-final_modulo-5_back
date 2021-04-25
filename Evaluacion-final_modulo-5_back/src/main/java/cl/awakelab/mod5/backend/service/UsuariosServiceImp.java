@@ -33,6 +33,7 @@ public class UsuariosServiceImp implements CrudService<UsuariosEntity>, IUsuario
 		return usuarioRepository.save(usuario);
 	}
 
+	
 	@Override
 	public UsuariosEntity buscarPorid(String idUsuario) {
 		
