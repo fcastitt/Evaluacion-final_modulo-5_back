@@ -4,5 +4,5 @@ import cl.awakelab.mod5.backend.entities.UsuariosEntity;
 
 public interface IUsuarioService {
 	
-	public UsuariosEntity buscarPorid(Integer idUsuario);
+	public UsuariosEntity buscarPorid(String idUsuario);
 }

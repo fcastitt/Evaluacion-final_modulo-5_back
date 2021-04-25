@@ -74,7 +74,7 @@ public class UsuarioControlador {
 
 	
 	@GetMapping("/buscar/{idUsuario}")
-	public ResponseEntity<UsuariosEntity> buscarPorId(@PathVariable Integer idUsuario) {
+	public ResponseEntity<UsuariosEntity> buscarPorId(@PathVariable String idUsuario) {
 
 		try {
 			UsuariosEntity usuario = new UsuariosEntity();
