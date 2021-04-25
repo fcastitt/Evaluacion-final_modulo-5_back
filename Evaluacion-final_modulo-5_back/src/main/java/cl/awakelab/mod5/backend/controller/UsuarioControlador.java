@@ -75,7 +75,7 @@ public class UsuarioControlador {
 	//MÉTODO PARA BUSCAR POR ID
 	@GetMapping("/buscar/{idUsuario}")
 	public ResponseEntity<UsuariosEntity> buscarPorId(@PathVariable String idUsuario) {
-		
+
 		try {
 			UsuariosEntity usuario = new UsuariosEntity();
 			usuario = iUsaurioService.buscarPorid(idUsuario);	

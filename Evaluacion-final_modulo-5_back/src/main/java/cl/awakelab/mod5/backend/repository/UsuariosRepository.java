@@ -7,6 +7,7 @@ import cl.awakelab.mod5.backend.entities.UsuariosEntity;
 
 public interface UsuariosRepository  extends JpaRepository<UsuariosEntity, String>{
 
+
 	
 	
 }
