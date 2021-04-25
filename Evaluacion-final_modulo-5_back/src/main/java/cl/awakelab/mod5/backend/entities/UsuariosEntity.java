@@ -29,5 +29,8 @@ public class UsuariosEntity {
 	private String usuFechaNacimiento;
 	@Column(name = "tipo_usuario")
 	private String tipoUsuario;
+	@Column(name = "password")
+	private String password;
+	
 
 }
