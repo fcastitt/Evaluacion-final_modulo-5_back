@@ -7,11 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cl.awakelab.mod5.backend.entities.CapacitacionEntity;
+import cl.awakelab.mod5.backend.entities.UsuariosEntity;
 import cl.awakelab.mod5.backend.service.CrudService;
+import cl.awakelab.mod5.backend.service.ICapacitacionService;
 
 
 @RestController
@@ -21,6 +26,10 @@ public class CapacitacionController {
 	@Autowired
 	CrudService<CapacitacionEntity> crudCap;
 	
+	@Autowired
+	ICapacitacionService iCapService;
+	
+	//MÉTODO PARA LISTAR API
 	@GetMapping
 	public ResponseEntity<List<CapacitacionEntity>> listadoCap(){
 		
@@ -42,5 +51,36 @@ public class CapacitacionController {
 		}
 	}
 	
-
+	
+	//MÉTODO PARA CREAR NUEVA CAPACITACIÓN
+	@PostMapping("/crear")
+	public ResponseEntity<CapacitacionEntity> crearUsuario(@RequestBody CapacitacionEntity nuevaCap) {
+	
+		 
+		try {
+			CapacitacionEntity cap = new CapacitacionEntity();
+			cap = crudCap.crear(nuevaCap);	
+			
+			return new ResponseEntity<CapacitacionEntity>(cap, HttpStatus.OK);
+			
+		} catch (Exception e) {
+			return new ResponseEntity<CapacitacionEntity>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
+	
+	//METODO PARA BUSCAR POR IDCAPACITACION
+	
+	@GetMapping("/buscar/{idCapacitacion}")
+	public ResponseEntity<CapacitacionEntity> buscarPorId(@PathVariable Integer idCapacitacion){
+		
+		try {
+			CapacitacionEntity cap= new CapacitacionEntity();
+			cap = iCapService.buscarPorid(idCapacitacion);
+			
+			return new ResponseEntity<CapacitacionEntity>(cap, HttpStatus.OK);
+		
+		} catch (Exception e) {
+			return new ResponseEntity<CapacitacionEntity>(HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+	}
 }

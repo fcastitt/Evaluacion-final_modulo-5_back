@@ -30,10 +30,10 @@ public class UsuarioControlador {
 	CrudService<UsuariosEntity> crudUsuario;
 	
 	@Autowired
-	IUsuarioService iUsuarioService ;
+	IUsuarioService iUsaurioService;
 	
 	
-	//método para listar api
+	//MÉTODO PARA LISTAR API
 	@GetMapping
 	public ResponseEntity<List<UsuariosEntity>> listadoUsuarios(){
 		
@@ -55,9 +55,9 @@ public class UsuarioControlador {
 	}
 	
 
-	//método para crear nuevo usuario
-	@GetMapping
-	public ResponseEntity<UsuariosEntity> crearUsuario(UsuariosEntity nuevoUsuario) {
+	//MÉTODO PARA CREAR NUEVO USUARIO
+	@PostMapping("/crear")
+	public ResponseEntity<UsuariosEntity> crearUsuario(@RequestBody UsuariosEntity nuevoUsuario) {
 	
 		 
 		try {
@@ -72,22 +72,22 @@ public class UsuarioControlador {
 		
 	}
 
-	
+	//MÉTODO PARA BUSCAR POR ID
 	@GetMapping("/buscar/{idUsuario}")
-	public ResponseEntity<UsuariosEntity> buscarPorId(@PathVariable Integer idUsuario) {
-
+	public ResponseEntity<UsuariosEntity> buscarPorId(@PathVariable String idUsuario) {
+		
 		try {
 			UsuariosEntity usuario = new UsuariosEntity();
-			usuario = iUsuarioService.buscarPorid(idUsuario);
-
+			usuario = iUsaurioService.buscarPorid(idUsuario);	
+			
 			return new ResponseEntity<UsuariosEntity>(usuario, HttpStatus.OK);
-
+			
 		} catch (Exception e) {
-
 			return new ResponseEntity<UsuariosEntity>(HttpStatus.INTERNAL_SERVER_ERROR);
 		}
-
 	}
+	
+
 
 
 }

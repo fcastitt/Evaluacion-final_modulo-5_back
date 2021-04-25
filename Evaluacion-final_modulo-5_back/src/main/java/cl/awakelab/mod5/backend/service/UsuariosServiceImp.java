@@ -32,9 +32,10 @@ public class UsuariosServiceImp implements CrudService<UsuariosEntity>, IUsuario
 		
 		return usuarioRepository.save(usuario);
 	}
-
+	
+	//IMPLEMENTA MÉTODO BUSCAR POR ID DE IUSUARIOSERVICE
 	@Override
-	public UsuariosEntity buscarPorid(Integer idUsuario) {
+	public UsuariosEntity buscarPorid(String idUsuario) {
 		
 		return usuarioRepository.findById(idUsuario).get();
 	}

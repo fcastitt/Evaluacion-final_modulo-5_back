@@ -10,24 +10,24 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
 @Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 @Entity
-public class UsuariosEntity {
-
+public class PagosEntity {
+	
 	@Id
-	@Column(name = "urun")
-	private String uRun;
-	@Column(name = "usunombre")
-	private String usuNombre;
-	@Column(name = "usuapellido")
-	private String usuApellido;
-	@Column(name = "usufechanacimiento")
-	private String usuFechaNacimiento;
-	@Column(name = "tipo_usuario")
-	private String tipoUsuario;
+	@Column(name="pagmonto")
+	private Integer pagoMonto;
+	@Column(name="pagmes")
+	private String pagMes;
+	@Column(name="pagaño")
+	private Integer pagAño;
+	@Column(name="pagrut")
+	private String pagRut;
+	@Column(name="pagfecha")
+	private String pagFecha;
 
 }
