@@ -25,10 +25,10 @@ public class AppConfig {
 
 		DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 
-		driverManagerDataSource.setDriverClassName(enviroment.getProperty("driver"));
-		driverManagerDataSource.setUsername(enviroment.getProperty("username"));
-		driverManagerDataSource.setPassword(enviroment.getProperty("password"));
-		driverManagerDataSource.setUrl(enviroment.getProperty("url"));
+		driverManagerDataSource.setDriverClassName(enviroment.getProperty("ddriver"));
+		driverManagerDataSource.setUsername(enviroment.getProperty("dusername"));
+		driverManagerDataSource.setPassword(enviroment.getProperty("dpassword"));
+		driverManagerDataSource.setUrl(enviroment.getProperty("durl"));
 
 		return driverManagerDataSource;
 	}
