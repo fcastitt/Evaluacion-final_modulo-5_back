@@ -68,6 +68,26 @@ public class UsuarioControlador {
 		}
 		
 	}
+	
+	//MÉTODO PARA EDITAR NUEVO USUARIO
+		@PostMapping("/editar")
+		public ResponseEntity<UsuariosEntity> editarUsuario(@RequestBody UsuariosEntity editaUsuario) {
+		 
+			try {
+				UsuariosEntity usuario = new UsuariosEntity();
+				usuario = crudUsuario.editar(editaUsuario);	
+				
+				return new ResponseEntity<UsuariosEntity>(usuario, HttpStatus.OK);
+				
+			} catch (Exception e) {
+				
+				return new ResponseEntity<UsuariosEntity>(HttpStatus.INTERNAL_SERVER_ERROR);
+			}
+			
+		}
+	
+	
+	
 
 	//MÉTODO PARA BUSCAR POR ID
 	@GetMapping("/buscar/{idUsuario}")
