@@ -49,7 +49,7 @@ public class PagosController {
 	
 	//MÉTODO PARA CREAR NUEVO PAGO
 		@PostMapping("/crear")
-		public ResponseEntity<PagosEntity> crearUsuario(@RequestBody PagosEntity nuevoPagos) {
+		public ResponseEntity<PagosEntity> crearPago(@RequestBody PagosEntity nuevoPagos) {
 		
 			 
 			try {

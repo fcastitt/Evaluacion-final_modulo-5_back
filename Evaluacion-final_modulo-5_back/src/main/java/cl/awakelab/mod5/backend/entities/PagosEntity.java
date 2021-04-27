@@ -20,7 +20,7 @@ public class PagosEntity {
 	
 	@Id
 	@Column(name="pagmonto")
-	private Integer pagoMonto;
+	private Integer pagMonto;
 	@Column(name="pagmes")
 	private String pagMes;
 	@Column(name="pagaño")

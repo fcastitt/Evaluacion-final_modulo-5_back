@@ -54,7 +54,7 @@ public class CapacitacionController {
 	
 	//MÉTODO PARA CREAR NUEVA CAPACITACIÓN
 	@PostMapping("/crear")
-	public ResponseEntity<CapacitacionEntity> crearUsuario(@RequestBody CapacitacionEntity nuevaCap) {
+	public ResponseEntity<CapacitacionEntity> crearCapacitacion(@RequestBody CapacitacionEntity nuevaCap) {
 	
 		 
 		try {
