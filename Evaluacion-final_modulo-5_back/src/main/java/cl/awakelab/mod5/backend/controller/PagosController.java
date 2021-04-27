@@ -12,10 +12,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cl.awakelab.mod5.backend.entities.CapacitacionEntity;
 import cl.awakelab.mod5.backend.entities.PagosEntity;
 import cl.awakelab.mod5.backend.service.CrudService;
-import cl.awakelab.mod5.backend.service.PagosServiceImp;
+
 
 @RestController
 @RequestMapping("/api/v1/pagos")

@@ -10,8 +10,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import ch.qos.logback.core.db.DriverManagerConnectionSource;
-
 @Configuration
 @PropertySource("classpath:database.properties")
 @ComponentScan("cl.awakelab.mod5.backend")

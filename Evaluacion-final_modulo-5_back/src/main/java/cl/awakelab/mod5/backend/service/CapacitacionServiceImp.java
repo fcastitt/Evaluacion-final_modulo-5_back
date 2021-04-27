@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cl.awakelab.mod5.backend.entities.CapacitacionEntity;
-import cl.awakelab.mod5.backend.entities.UsuariosEntity;
 import cl.awakelab.mod5.backend.repository.CapacitacionRespository;
 
 @Service
