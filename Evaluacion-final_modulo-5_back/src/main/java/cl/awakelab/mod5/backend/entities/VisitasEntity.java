@@ -24,12 +24,13 @@ public class VisitasEntity {
 	@Column(name="visfecha")
 	private String visFecha;
 	@Column(name="vishora")
-	private String visHra;
-	@Column(name="vislugar")
-	private String visLugar;
-	@Column(name="viscomentarios")
-	private String visComentarios;
-	@Column(name="cliente_rutcliente")
-	private Integer clienteRutCliente;
+	private String visHora;
+	@Column(name="visrutcliente")
+	private String visRutCliente;
+	@Column(name="visnombrecliente")
+	private String visNombreCliente;
+	@Column(name="vischequeo")
+	private String visChequeo;
+
 
 }

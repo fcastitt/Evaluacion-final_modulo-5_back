@@ -14,8 +14,8 @@ import cl.awakelab.mod5.backend.entities.VisitasEntity;
 import cl.awakelab.mod5.backend.service.CrudService;
 
 @RestController
-@RequestMapping("/api/v1/vistas")
-public class VisitasController {
+@RequestMapping("/api/v1/visitas")
+public class VisitasController{
 
 	@Autowired
 	CrudService<VisitasEntity> crudVisitas;
