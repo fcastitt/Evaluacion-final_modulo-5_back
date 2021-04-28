@@ -36,6 +36,6 @@ public class CapacitacionEntity {
 	@Column(name = "capduracion")
 	private Integer capDuracion;
 	@Column(name = "cliente_rutcliente")
-	private Integer clienteRutCliente;
+	private String clienteRutCliente;
 
 }
