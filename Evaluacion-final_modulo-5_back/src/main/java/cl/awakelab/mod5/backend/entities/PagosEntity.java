@@ -23,8 +23,8 @@ public class PagosEntity {
 	private Integer pagMonto;
 	@Column(name="pagmes")
 	private String pagMes;
-	@Column(name="pagaño")
-	private Integer pagAño;
+	@Column(name="paganno")
+	private Integer pagAnno;
 	@Column(name="pagrut")
 	private String pagRut;
 	@Column(name="pagfecha")
